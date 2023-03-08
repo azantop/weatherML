@@ -1,4 +1,6 @@
 # weatherML -  Weather prediction based on historical data
+
+<img src="https://github.com/azantop/weatherML/blob/main/images/forecast.gif?raw=true" alt="temperatures" width="600"/>
 Multi-step time series forecasting with physics informed neural networks (PINN) on multivariate weather data.  
 We use the meteostat library to access wordwide hourly and daily historical weather data.  
 For data processing we use a combination of Pandas and Numpy. Machine learning is written with Tensorflow.   
