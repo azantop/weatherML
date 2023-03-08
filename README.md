@@ -20,6 +20,7 @@ Wind speed is visualized as streamline plot, where the line thickness correspond
 The Model receives the last 72 hours of the weather of all stations 
 and makes a forecast of the future 72 hours on the whole map.
 The model is defined as follows:
+<pre>
 <code>
 def build_model():
     channels = 6
@@ -52,6 +53,7 @@ def build_model():
      
     return keras.Model( [grid_past,grid_now], [output_grid] )  
 </code>
+</pre>
 This architecture results in 40,186,236 trainalble parameters.
 
 ## Results: Temperature forecast for a single point:
