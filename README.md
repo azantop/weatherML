@@ -8,7 +8,7 @@ Data processing interpolates missing values (sometimes a stations miss a measure
 from nearby stations. 
 
 ## Temperature visualization:
-![alt text](https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true)
+<img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=tru" alt="temperatures" width="200"/>
 
 ## Wind speed visualization:
 ![alt text](https://github.com/azantop/weatherML/blob/main/images/windmap.png?raw=true)
