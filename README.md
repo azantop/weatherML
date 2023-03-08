@@ -22,13 +22,10 @@ and makes a forecast of the future 72 hours on the whole map.
 The model is defined as follows:  
 <pre>
 <code>def build_model():
-    channels = 6
-    features = 3
-    past = 72
-    future = 72
+    channels, features = 6, 3
+    past, future = 72, 72
     grid_past  = layers.Input((past,grid_size,grid_size,channels), name="grid_past") 
     grid_now   = layers.Input((grid_size,grid_size,channels), name="grid_now")
-    dropout_rate = 0.0
     
     # encoder for the grid state:
     grid_encoder = layers.TimeDistributed( layers.LocallyConnected2D( channels, (3,3) ), name="local2D_1" )( grid_past )
