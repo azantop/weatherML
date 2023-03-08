@@ -8,5 +8,21 @@ Data processing interpolates missing values (sometimes a stations miss a measure
 from nearby stations. 
 
 ## Input data visualization: Temperature / Wind speed
-<img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="500"/>
-<img src="https://github.com/azantop/weatherML/blob/main/images/windmap.png?raw=true" alt="temperatures" width="500"/>
+The historic weather data is taken for all points shown on the following map, along with a contour plot of the temperature.
+We use hourly data for 10 years after 2012. Here, we show a day in June. 
+<img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="600"/>
+
+Wind speed is visualized as streamline plot, where the line thickness corresponds to the wind speed.  
+<img src="https://github.com/azantop/weatherML/blob/main/images/windmap.png?raw=true" alt="temperatures" width="600"/>
+
+## Machine Learning Model and Forecast length:
+
+The Model receives the last 72 hours of the weather of all stations 
+and makes a forecast of the future 72 hours on the whole map.
+
+## Results: Temperature forecast for a single point:
+We observe a good agreement between predicted an actual future weather data.  
+<img src="https://github.com/azantop/weatherML/blob/main/images/prediction.png?raw=true" alt="temperatures" width="500"/>
+
+### Results: Temperature forecast on the whole map:
+<img src="https://github.com/azantop/weatherML/blob/main/images/prediction_map.png?raw=true" alt="temperatures" width="800"/>
