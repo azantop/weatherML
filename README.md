@@ -18,11 +18,10 @@ Wind speed is visualized as streamline plot, where the line thickness correspond
 ## Machine Learning Model and Forecast length:
 
 The Model receives the last 72 hours of the weather of all stations 
-and makes a forecast of the future 72 hours on the whole map.
-The model is defined as follows:
+and makes a forecast of the future 72 hours on the whole map.  
+The model is defined as follows:  
 <pre>
-<code>
-def build_model():
+<code>def build_model():
     channels = 6
     features = 3
     past = 72
@@ -51,8 +50,7 @@ def build_model():
     output_grid = layers.TimeDistributed( tf.keras.layers.Conv2DTranspose( features, 3, input_shape=(8,8,1) ), 
                                           name="upscaler"  )( output_grid )
      
-    return keras.Model( [grid_past,grid_now], [output_grid] )  
-</code>
+    return keras.Model( [grid_past,grid_now], [output_grid] )</code>
 </pre>
 This architecture results in 40,186,236 trainalble parameters.
 
