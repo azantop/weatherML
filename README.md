@@ -7,9 +7,6 @@ For this project, we load historical weather data in Europe on a rectengular 10x
 Data processing interpolates missing values (sometimes a stations miss a measurement)
 from nearby stations. 
 
-## Temperature visualization:
-<img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="600"/>
-
-## Wind speed visualization:
-<img src="https://github.com/azantop/weatherML/blob/main/images/windmap.png?raw=true" alt="temperatures" width="600"/>
-
+## Input data visualization: Temperature / Wind speed
+<img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="500"/>
+<img src="https://github.com/azantop/weatherML/blob/main/images/windmap.png?raw=true" alt="temperatures" width="500"/>
