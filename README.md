@@ -24,5 +24,5 @@ and makes a forecast of the future 72 hours on the whole map.
 We observe a good agreement between predicted an actual future weather data.  
 <img src="https://github.com/azantop/weatherML/blob/main/images/prediction.png?raw=true" alt="temperatures" width="500"/>
 
-### Results: Temperature forecast on the whole map:
-<img src="https://github.com/azantop/weatherML/blob/main/images/prediction_map.png?raw=true" alt="temperatures" width="800"/>
+## Results: Temperature forecast on the whole map:
+<img src="https://github.com/azantop/weatherML/blob/main/images/map_prediction.png?raw=true" alt="temperatures" width="800"/>
