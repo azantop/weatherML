@@ -21,9 +21,16 @@ The Model receives the last 72 hours of the weather of all stations
 and makes a forecast of the future 72 hours on the whole map.  
 The model is defined as follows:  
 <pre>
-<code>def build_model():
-    channels, features = 6, 3
-    past, future = 72, 72
+<code>def build_model( grid_size, channels, features, past, future ):
+    """Creates tensorflow model 
+    Params
+        ======
+            grid_size: length of the 2D input grid
+            channels: number of input data channels
+            features: features represented in the output of the model
+            past: hours of data
+            future: hours of forecast
+    """
     grid_past  = layers.Input((past,grid_size,grid_size,channels), name="grid_past") 
     grid_now   = layers.Input((grid_size,grid_size,channels), name="grid_now")
     
@@ -35,7 +42,7 @@ The model is defined as follows:
     grid_encoder = layers.TimeDistributed( layers.Flatten() )( grid_encoder )
     
     # recurrent network for the temporal dynamics:
-    time_encoder = layers.LSTM( 32, name="recurrent", return_sequences=True )( grid_encoder ) 
+    time_encoder = layers.LSTM( 64, name="recurrent", return_sequences=True )( grid_encoder ) 
     time_encoder = layers.Flatten()( time_encoder )
     
     # merge with the grid state of current weather state:
