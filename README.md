@@ -4,23 +4,20 @@
 Demonstration of multi-step time series forecasting with physics informed neural networks (PINN) on multivariate weather data. 
 We use the meteostat library to access wordwide hourly and daily historical weather data.  
 
-For data processing we use a combination of Pandas and Numpy. Machine learning is written with Tensorflow.   
-To install and run the whole model a [jupyter server](https://jupyter.org/install) is required.
-
-## Input data visualization: Temperature / Wind speed
-For this project, we load historical weather data in Europe on a rectengular 10x10 grid.  
+## Details and Visualization of the Data Sources
+For this project, we load historical weather data in Europe on a rectengular 10x10 grid. 
 Data processing interpolates missing values from nearby stations. 
 The historic weather data is taken for all points shown on the following map, 
-along with a contour plot of the temperature.  
+along with a contour plot of the temperature. 
 We use hourly data for 10 years after 2012. Here, we show a day in June. 
 <img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="600"/>
 
 Wind speed is visualized as streamline plot, where the line thickness corresponds to the wind speed.  
 <img src="https://github.com/azantop/weatherML/blob/main/images/windmap.png?raw=true" alt="temperatures" width="600"/>
 
-## Machine Learning Model and Forecast length:
+## Details of the Machine Learning Model and Physics Loss Function:
 
-The model receives the last 72 hours of the weather of all stations and makes a forecast  
+The model receives the last 72 hours of the weather of all stations and makes a forecast 
 of the future 72 hours on the whole map. The model is defined as follows: 
 * a time distributed spatial encoder consisting of locally connected and max pooling layers
 * a LSTM recurrent layer for the temporal dynamics 
@@ -78,11 +75,19 @@ we apply the differential operators on both predicted $y$ and $y_true$ values.
 The comparison shows that the learning is aided such that the model reaches an overall better forecast. 
 
 ## Results: Temperature forecast for a single point:
-We observe a good agreement between the forecast an actual future weather data on all of the spatial regions.  
-Thereby, the model captures diverse different weather trends over several days.
+We observe a good agreement between the forecast an actual future weather data on all of the spatial regions. 
+Thereby, the model captures diverse different weather trends over several days.  
 <img src="https://github.com/azantop/weatherML/blob/main/images/forecast.png?raw=true" alt="temperatures" width="500"/>
 
 ## Results: Temperature forecast on the whole map:
 The complete map ouptut of the network also shows a good agreement capturing regional developments over several days. 
 Deviations are mostly expressed in absolute values. Drawn on the world map, we obtain the video shown above.  
 <img src="https://github.com/azantop/weatherML/blob/main/images/map_forecast.png?raw=true" alt="temperatures" width="800"/>  
+
+## Getting Started
+To run the code provided in this repository, you must have python 3.6 or higher installed. In addition, you will need to have the packages:
+* a running [jupyter](https://jupyter.org/) notebook server is required.
+* [meteostat]() for retrieving weather data.
+* [pandas](https://pandas.pydata.org/) and [numpy](https://numpy.org/doc/stable/index.html) for data processing. 
+* [tensorflow](https://www.tensorflow.org/) for machine learning.   
+* [matplotlib](https://matplotlib.org/), [cartopy](https://scitools.org.uk/cartopy/docs/latest/) and [pillow](https://pillow.readthedocs.io/en/stable/?badge=latest) for visualizations.
