@@ -66,9 +66,12 @@ of the future 72 hours on the whole map. The model is defined as follows:
 This architecture results in 80,375,718 trainalble parameters.  
 
 We define a physics loss reminicent of heat conduction 
-$$ \mathrm{loss}_T = \Delta T - \partial_t T$$
+
+$$\mathrm{loss}_T = \Delta T - \partial_t T$$
+
 and the euler equation
-$$ \mathrm{loss}_T = |\partial_t \mathbf{v} + (\mathbf{v}\cdot\nabla)\mathbf{v}|^2. $$
+
+$$\mathrm{loss}_T = |\partial_t \mathbf{v} + (\mathbf{v}\cdot\nabla)\mathbf{v}|^2. $$
 
 ## Results: Temperature forecast for a single point:
 We observe a good agreement between predicted an actual future weather data.  
