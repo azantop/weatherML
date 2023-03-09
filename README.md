@@ -5,15 +5,18 @@ Demonstration of multi-step time series forecasting with physics informed neural
 We use the meteostat library to access wordwide hourly and daily historical weather data.  
 
 ## Details and Visualization of the Data Sources
-For this project, we load historical weather data in Europe on a rectengular 10x10 grid. 
+For this project, we load  10 years of hourly historical weather data in Europe on a rectengular 10x10 grid. 
 Data processing interpolates missing values from nearby stations. 
 The historic weather data is taken for all points shown on the following map, 
-along with a contour plot of the temperature. 
-We use hourly data for 10 years after 2012. Here, we show a day in June. 
+along with a contour plot of the temperature, showing a day in June:
 <img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="600"/>
-
-Wind speed is visualized as streamline plot, where the line thickness corresponds to the wind speed.  
-<img src="https://github.com/azantop/weatherML/blob/main/images/windmap.png?raw=true" alt="temperatures" width="600"/>
+The complete set of inputs to the model comprises 
+* Temperature
+* Dew point 
+* Relative humidity
+* Wind speed 
+* Wind direction
+* Ground level pressure
 
 ## Details of the Machine Learning Model and Physics Loss Function:
 
