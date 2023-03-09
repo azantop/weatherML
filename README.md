@@ -10,7 +10,7 @@ To install and run the whole model a [jupyter server](https://jupyter.org/instal
 ## Input data visualization: Temperature / Wind speed
 For this project, we load historical weather data in Europe on a rectengular 10x10 grid.  
 Data processing interpolates missing values from nearby stations. 
-The historic weather data is taken for all points shown on the following map,  
+The historic weather data is taken for all points shown on the following map, 
 along with a contour plot of the temperature.  
 We use hourly data for 10 years after 2012. Here, we show a day in June. 
 <img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="600"/>
