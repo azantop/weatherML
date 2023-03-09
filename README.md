@@ -8,8 +8,10 @@ We use the meteostat library to access wordwide hourly and daily historical weat
 For this project, we load  10 years of hourly historical weather data in Europe on a rectengular 10x10 grid. 
 Data processing interpolates missing values from nearby stations. 
 The historic weather data is taken for all points shown on the following map, 
-along with a contour plot of the temperature, showing a day in June:
+along with a contour plot of the temperature, showing a day in June:  
+
 <img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="600"/>
+
 The complete set of inputs to the model comprises 
 * Temperature
 * Dew point 
