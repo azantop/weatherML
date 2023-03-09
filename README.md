@@ -65,21 +65,25 @@ of the future 72 hours on the whole map. The model is defined as follows:
 </pre>
 This architecture results in 80,375,718 trainalble parameters.  
 
-We define a physics loss reminicent of heat conduction 
+Apart from the definition of the NN-model we define additional physics loss functions reminicent of heat conduction 
 
 $$\mathrm{loss}_T = \Delta T - \partial_t T$$
 
 and the euler equation
 
-$$\mathrm{loss}_T = |\partial_t \mathbf{v} + (\mathbf{v}\cdot\nabla)\mathbf{v}|^2. $$
+$$\mathrm{loss}_\mathbf{v} = |\partial_t \mathbf{v} + (\mathbf{v}\cdot\nabla)\mathbf{v}|^2 $$
+
+to train the model along with the mean squared error. 
+The comparison shows that the learning is aided such that the model reaches an overall better forecast. 
 
 ## Results: Temperature forecast for a single point:
-We observe a good agreement between predicted an actual future weather data.  
+We observe a good agreement between the forecast an actual future weather data on all of the spatial regions.  
 <img src="https://github.com/azantop/weatherML/blob/main/images/forecast.png?raw=true" alt="temperatures" width="500"/>
 
 ## Results: Temperature forecast on the whole map:
-The complete ouptut of the network looks as follows:
+The complete map ouptut of the network also shows a good agreement capturing regional developments over several days. 
 <img src="https://github.com/azantop/weatherML/blob/main/images/map_forecast.png?raw=true" alt="temperatures" width="800"/>  
+Deviations are mostly expressed in absolute values.
 Drawn on the world map, we obtain the video shown above:  
 <img src="https://github.com/azantop/weatherML/blob/main/images/forecast.gif?raw=true" alt="temperatures" width="600"/>
 
