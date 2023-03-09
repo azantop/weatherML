@@ -18,7 +18,8 @@ The complete set of inputs to the model comprises
 * Relative humidity
 * Wind speed 
 * Wind direction
-* Ground level pressure
+* Ground level pressure  
+
 For 10 years and a sliding window length of 144 hours, we obtain a dataset with roughly $85.000$ entries.
 
 ## Details of the Machine Learning Model and Physics Loss Function:
