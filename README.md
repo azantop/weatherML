@@ -1,16 +1,15 @@
 # weatherML -  weather forecast based on historical data
 
 <img src="https://github.com/azantop/weatherML/blob/main/images/forecast.gif?raw=true" alt="temperatures" width="600"/>
-Demonstration of multi-step time series forecasting with physics informed neural networks (PINN) on multivariate weather data.  
-
+Demonstration of multi-step time series forecasting with physics informed neural networks (PINN) on multivariate weather data. 
 We use the meteostat library to access wordwide hourly and daily historical weather data.  
 
 For data processing we use a combination of Pandas and Numpy. Machine learning is written with Tensorflow.   
-
-For this project, we load historical weather data in Europe on a rectengular 10x10 grid.  
-Data processing interpolates missing values from nearby stations. 
+To install and run the whole model a [jupyter server](https://jupyter.org/install) is required.
 
 ## Input data visualization: Temperature / Wind speed
+For this project, we load historical weather data in Europe on a rectengular 10x10 grid.  
+Data processing interpolates missing values from nearby stations. 
 The historic weather data is taken for all points shown on the following map,  
 along with a contour plot of the temperature.  
 We use hourly data for 10 years after 2012. Here, we show a day in June. 
