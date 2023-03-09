@@ -2,13 +2,14 @@
 
 <img src="https://github.com/azantop/weatherML/blob/main/images/forecast.gif?raw=true" alt="temperatures" width="600"/>
 Demonstration of multi-step time series forecasting with physics informed neural networks (PINN) on multivariate weather data. 
-We use the meteostat library to access wordwide hourly and daily historical weather data.  
+To access wordwide hourly and daily historical weather data we use the [meteostat](https://meteostat.net/de/) library.
+
 
 ## Details and Visualization of the Data Sources
-For this project, we load  10 years of hourly historical weather data in Europe on a rectengular 10x10 grid. 
-Data processing interpolates missing values from nearby stations. 
-The historic weather data is taken for all points shown on the following map, 
-along with a contour plot of the temperature, showing a day in June:  
+For this project, we use 10 years of hourly historical weather data in Europe on a rectengular 10x10 grid. 
+Data processing is used to interpolate missing values from nearby stations. 
+The following map shows all data point coordinates 
+along with a contour plot of the historic temperature data, showing a day in June 2012:  
 
 <img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="600"/>
 
@@ -25,10 +26,11 @@ For 10 years and a sliding window length of 144 hours, we obtain a dataset with 
 ## Details of the Machine Learning Model and Physics Loss Function:
 
 The model receives the last 72 hours of the weather of all stations and makes a forecast 
-of the future 72 hours on the whole map. The model is defined as follows: 
+of the future 72 hours on the whole map. 
+The neural network layout is defined as follows: 
 * a time distributed spatial encoder consisting of locally connected and max pooling layers
 * a LSTM recurrent layer for the temporal dynamics 
-* an decoder consisting of a dense layer, a de-convolution, and a locally connected layer
+* an decoder consisting of a dense and a deconvolution plus a locally connected layer
 <pre>
 <code>def build_model( grid_size, channels, features, past, future ):
     """ Creates tensorflow model 
@@ -92,7 +94,7 @@ Deviations are mostly expressed in absolute values. Drawn on the world map, we o
 ## Getting Started
 To run the code provided in this repository, you must have python 3.6 or higher installed. In addition, you will need to have the packages:
 * a running [jupyter](https://jupyter.org/) notebook server is required.
-* [meteostat]() to retrieve weather data.
+* [meteostat](https://dev.meteostat.net/python/) python api to retrieve weather data.
 * [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/doc/stable/index.html) and [scipy](https://scipy.org/) for data processing. 
 * [tensorflow](https://www.tensorflow.org/) for machine learning.   
 * [matplotlib](https://matplotlib.org/), [cartopy](https://scitools.org.uk/cartopy/docs/latest/) and [pillow](https://pillow.readthedocs.io/en/stable/?badge=latest) for visualizations.
