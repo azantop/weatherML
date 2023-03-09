@@ -80,12 +80,10 @@ The comparison shows that the learning is aided such that the model reaches an o
 
 ## Results: Temperature forecast for a single point:
 We observe a good agreement between the forecast an actual future weather data on all of the spatial regions.  
+Thereby, the model captures diverse different weather trends over several days.
 <img src="https://github.com/azantop/weatherML/blob/main/images/forecast.png?raw=true" alt="temperatures" width="500"/>
 
 ## Results: Temperature forecast on the whole map:
 The complete map ouptut of the network also shows a good agreement capturing regional developments over several days. 
+Deviations are mostly expressed in absolute values. Drawn on the world map, we obtain the video shown above.  
 <img src="https://github.com/azantop/weatherML/blob/main/images/map_forecast.png?raw=true" alt="temperatures" width="800"/>  
-Deviations are mostly expressed in absolute values.
-Drawn on the world map, we obtain the video shown above:  
-<img src="https://github.com/azantop/weatherML/blob/main/images/forecast.gif?raw=true" alt="temperatures" width="600"/>
-
