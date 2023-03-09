@@ -19,6 +19,7 @@ The complete set of inputs to the model comprises
 * Wind speed 
 * Wind direction
 * Ground level pressure
+For 10 years and a sliding window length of 144 hours, we obtain a dataset with roughly $85.000$ entries.
 
 ## Details of the Machine Learning Model and Physics Loss Function:
 
@@ -64,8 +65,6 @@ of the future 72 hours on the whole map. The model is defined as follows:
   
     return keras.Model( [grid_past,grid_now], [output_grid] )</code>
 </pre>
-This architecture results in 80,375,718 trainalble parameters.  
-
 Apart from the definition of the NN-model we define additional physics loss functions reminicent of heat conduction 
 
 $$\mathrm{loss}_T = |c\Delta T - \partial_t T|^2$$
