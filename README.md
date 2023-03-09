@@ -67,13 +67,15 @@ This architecture results in 80,375,718 trainalble parameters.
 
 Apart from the definition of the NN-model we define additional physics loss functions reminicent of heat conduction 
 
-$$\mathrm{loss}_T = \Delta T - \partial_t T$$
+$$\mathrm{loss}_T = |c\Delta T - \partial_t T|^2$$
 
-and the euler equation
+and the Euler equation
 
 $$\mathrm{loss}_\mathbf{v} = |\partial_t \mathbf{v} + (\mathbf{v}\cdot\nabla)\mathbf{v}|^2 $$
 
 to train the model along with the mean squared error. 
+Since there are a inhomogeneous constants present in both of these losses, 
+we apply the differential operators on both predicted $y$ and $y_true$ values.
 The comparison shows that the learning is aided such that the model reaches an overall better forecast. 
 
 ## Results: Temperature forecast for a single point:
