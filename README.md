@@ -1,4 +1,4 @@
-# weatherML -  Weather prediction based on historical data
+# weatherML -  weather forecast based on historical data
 
 <img src="https://github.com/azantop/weatherML/blob/main/images/forecast.gif?raw=true" alt="temperatures" width="600"/>
 Multi-step time series forecasting with physics informed neural networks (PINN) on multivariate weather data.  
@@ -10,7 +10,7 @@ Data processing interpolates missing values (sometimes a stations miss a measure
 from nearby stations. 
 
 ## Input data visualization: Temperature / Wind speed
-The historic weather data is taken for all points shown on the following map, along with a contour plot of the temperature.
+The historic weather data is taken for all points shown on the following map, along with a contour plot of the temperature.  
 We use hourly data for 10 years after 2012. Here, we show a day in June. 
 <img src="https://github.com/azantop/weatherML/blob/main/images/heatmap.png?raw=true" alt="temperatures" width="600"/>
 
@@ -19,9 +19,11 @@ Wind speed is visualized as streamline plot, where the line thickness correspond
 
 ## Machine Learning Model and Forecast length:
 
-The Model receives the last 72 hours of the weather of all stations 
-and makes a forecast of the future 72 hours on the whole map.  
-The model is defined as follows:  
+The model receives the last 72 hours of the weather of all stations and makes a forecast  
+of the future 72 hours on the whole map. The model is defined as follows: 
+* a time distributed spatial encoder consisting of locally connected and max pooling layers applied to the grid
+* a LSTM recurrent layer for the temporal dynamics 
+* an decoder consisting of a dense layer and a de-convolution layer applied.
 <pre>
 <code>def build_model( grid_size, channels, features, past, future ):
     """Creates tensorflow model 
