@@ -92,7 +92,7 @@ Deviations are mostly expressed in absolute values. Drawn on the world map, we o
 ## Getting Started
 To run the code provided in this repository, you must have python 3.6 or higher installed. In addition, you will need to have the packages:
 * a running [jupyter](https://jupyter.org/) notebook server is required.
-* [meteostat]() for retrieving weather data.
-* [pandas](https://pandas.pydata.org/) and [numpy](https://numpy.org/doc/stable/index.html) for data processing. 
+* [meteostat]() to retrieve weather data.
+* [pandas](https://pandas.pydata.org/), [numpy](https://numpy.org/doc/stable/index.html) and [scipy](https://scipy.org/) for data processing. 
 * [tensorflow](https://www.tensorflow.org/) for machine learning.   
 * [matplotlib](https://matplotlib.org/), [cartopy](https://scitools.org.uk/cartopy/docs/latest/) and [pillow](https://pillow.readthedocs.io/en/stable/?badge=latest) for visualizations.
