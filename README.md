@@ -67,4 +67,8 @@ We observe a good agreement between predicted an actual future weather data.
 <img src="https://github.com/azantop/weatherML/blob/main/images/prediction.png?raw=true" alt="temperatures" width="500"/>
 
 ## Results: Temperature forecast on the whole map:
+The complete ouptut of the network looks as follows:
 <img src="https://github.com/azantop/weatherML/blob/main/images/map_prediction.png?raw=true" alt="temperatures" width="800"/>
+Drawn on the world map, we obtain the video shown above:
+<img src="https://github.com/azantop/weatherML/blob/main/images/forecast.gif?raw=true" alt="temperatures" width="600"/>
+
