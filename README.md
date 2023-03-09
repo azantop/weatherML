@@ -2,8 +2,7 @@
 
 <img src="https://github.com/azantop/weatherML/blob/main/images/forecast.gif?raw=true" alt="temperatures" width="600"/>
 Demonstration of multi-step time series forecasting with physics informed neural networks (PINN) on multivariate weather data. 
-To access wordwide hourly and daily historical weather data we use the [meteostat](https://meteostat.net/de/)  library.
-
+To access wordwide hourly and daily historical weather data we use the [meteostat](https://meteostat.net/) library.
 
 ## Details and Visualization of the Data Sources
 For this project, we use 10 years of hourly historical weather data in Europe on a rectengular 10x10 grid. 
